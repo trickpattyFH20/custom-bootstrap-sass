@@ -1,0 +1,19 @@
+{
+  "name": "custombootstrapsass",
+  "version": "1.0.0",
+  "description": "automate custom bootstrap sass build",
+  "main": "buildcustom.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bootstrap",
+    "sass",
+    "custom"
+  ],
+  "author": "Patrick Lawler",
+  "license": "ISC",
+  "dependencies": {
+    "cli-color": "^1.1.0"
+  }
+}
