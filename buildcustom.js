@@ -1,11 +1,9 @@
 var fs = require('fs'),
     clc = require('cli-color');
     
-function customBsSass(configFile, bootstrapDir){
-    var configFile = configFile || [];
+function customBsSass(config, bootstrapDir){
+    var config = config || [];
     var basepath = bootstrapDir || 'bower_components/bootstrap-sass/assets/stylesheets/';
-    
-    var config = require('./'+configFile)
 
     var sassfile = '_bootstrap.scss';
 
