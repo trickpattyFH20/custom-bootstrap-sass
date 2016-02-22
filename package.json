@@ -1,6 +1,6 @@
 {
   "name": "custombootstrapsass",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "automate custom bootstrap sass build",
   "main": "buildcustom.js",
   "scripts": {
