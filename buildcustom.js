@@ -2,8 +2,61 @@ var fs = require('fs'),
     clc = require('cli-color');
     
 function customBsSass(config, bootstrapDir){
+    
     var config = config || [];
-    var basepath = bootstrapDir || 'bower_components/bootstrap-sass/assets/stylesheets/';
+    try{
+        var basepath,
+            defaultpath;
+        try {
+            // Query the entry
+            defaultpath = 'bower_components/bootstrap-sass/assets/stylesheets/';
+            stats = fs.lstatSync(defaultpath);
+            if (!stats.isDirectory()) {
+                defaultpath = false;
+            }
+        }
+        catch (e) {
+            defaultpath = false;
+        }
+        
+        if(bootstrapDir){
+            if(fs.lstatSync(bootstrapDir).isDirectory()){
+                basepath = bootstrapDir;
+            }
+        }else if(defaultpath){
+            basepath = defaultpath;
+        }else if(fs.lstatSync('.bowerrc').isFile()){
+            var bowerrc = JSON.parse(fs.readFileSync('.bowerrc'));
+            if(bowerrc.directory){
+                if(fs.lstatSync(bowerrc.directory).isDirectory()){
+                    thispath = bowerrc.directory+'/bootstrap-sass/assets/stylesheets/';
+                    try {
+                        // Query the entry
+                    
+                        stats = fs.lstatSync(thispath);
+                        if (!stats.isDirectory()) {
+                            thispath = false;
+                        }
+                    }
+                    catch (e) {
+                        thispath = false;
+                        throw 'error 0'
+                    }
+                    basepath = thispath;
+                }
+            }else{
+                throw 'error 1'
+            }
+        }else{
+            throw 'error 2'
+        }
+    }
+    catch(err){
+        console.log(clc.yellow(err))
+        console.log(clc.red('error finding your bower installation of bootstrap-sass'))
+        console.log(clc.red('custom bootstrap sass not built :\( \n'))
+        return;
+    }
 
     var sassfile = '_bootstrap.scss';
 
@@ -12,7 +65,6 @@ function customBsSass(config, bootstrapDir){
 
     try {
         stats = fs.lstatSync(basepath + '_bootstrap-custom.scss');
-
         if (stats.isFile()) {
             console.log(clc.yellow('removing previous custom bootstrap sass build...'))
             fs.unlink( basepath + '_bootstrap-custom.scss')
