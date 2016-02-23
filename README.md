@@ -16,7 +16,7 @@ or
 
 #### implement with gulp, grunt, or your own node script:
 `var custombs = require('custombootstrapsass')`;
-`var pathToBootstrapSassDir = 'bower_componets/bootstrap-sass'`
+`var pathToBootstrapSassDir = 'bower_componets/bootstrap-sass'`;
 `var config = [ 'glyphicons', 'grid', 'tables']`;
 
 `custombs([config(array)], [pathToBootstrapSassDir(string)])`;
