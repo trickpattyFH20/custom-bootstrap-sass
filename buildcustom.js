@@ -52,8 +52,7 @@ function customBsSass(config, bootstrapDir){
         }
     }
     catch(err){
-        console.log(clc.yellow(err))
-        console.log(clc.red('error finding your bower installation of bootstrap-sass'))
+        console.log(clc.red('error finding a bower installation of bootstrap-sass'))
         console.log(clc.red('custom bootstrap sass not built :\( \n'))
         return;
     }
