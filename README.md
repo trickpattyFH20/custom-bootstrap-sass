@@ -1,10 +1,10 @@
-#automate custom bootstrap sass builds 
+#automate custom bootstrap sass builds
 ### this module builds a file named '_bootstrap-custom.scss' as a sibling of '_bootstrap.scss' as the docs recommend
 [https://github.com/twbs/bootstrap-sass#configuration](https://github.com/twbs/bootstrap-sass#configuration)
 ### use with gulp / grunt:
 
 #### install
-`$ npm install custombootstrapsass --save`
+`$ npm install custom-bootstrap-sass --save`
 
 #### include
 `var custombs = require('custombootstrapsass')`;
