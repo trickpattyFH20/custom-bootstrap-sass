@@ -24,6 +24,6 @@ or
 `custombs([config(array)], [pathToBootstrapSassDir(string)])`;
 
 ##### config:
-[config] argument is an array of bootstrap components to __*exclude*__ from your build
+[config] - an array of bootstrap components to __*exclude*__ from your build
 
-[pathToBootstrapSassDir] path to your bootstrap-sass directory. if you installed bootstrap-sass with bower, and are running custom-bootstrap-sass next to .bowerrc or /bower_components/ then this argument is optional, custom-bootstrap-sass will find the folder for you
+[pathToBootstrapSassDir] - path to your bootstrap-sass directory. if you installed bootstrap-sass with bower, and are running custom-bootstrap-sass next to .bowerrc or /bower_components/ then this argument is optional, custom-bootstrap-sass will find the folder for you
