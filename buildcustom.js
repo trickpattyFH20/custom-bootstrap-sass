@@ -21,7 +21,7 @@ function customBsSass(config, bootstrapDir){
         
         if(bootstrapDir){
             if(fs.lstatSync(bootstrapDir).isDirectory()){
-                basepath = bootstrapDir;
+                basepath = bootstrapDir+'/assets/stylesheets/';
             }
         }else if(defaultpath){
             basepath = defaultpath;

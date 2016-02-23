@@ -1,11 +1,15 @@
 {
-  "name": "custombootstrapsass",
+  "name": "custom-bootstrap-sass",
   "version": "1.0.13",
   "description": "automate custom bootstrap sass build",
   "main": "buildcustom.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository":{
+      "type": "git",
+      "url": "https://github.com/trickpattyFH20/custombootstrapsass"
+  }
   "keywords": [
     "bootstrap",
     "sass",
