@@ -2,7 +2,7 @@
 #automate custom bootstrap sass builds
 ### this module builds a file named '_bootstrap-custom.scss' as a sibling of '_bootstrap.scss' as the docs recommend
 [https://github.com/twbs/bootstrap-sass#configuration](https://github.com/twbs/bootstrap-sass#configuration)
-#### dependencies:
+##### dependencies:
 ######bootstrap-sass
 `$ npm install boostrap-sass`
 
@@ -10,18 +10,18 @@ or
 
 `$ bower install bootstrap-sass`
 
-#### install:
+##### install:
 `$ npm install custom-bootstrap-sass --save`
 
-#### include:
-`var custombs = require('custombootstrapsass')`;
-
-#### config:
-the config argument is an array of bootstrap components to __*exclude*__ from your build
-
-`var config = [ 'glyphicons', 'grid', 'tables']`;
 
 #### implement with gulp, grunt, or your own node script:
+`var custombs = require('custombootstrapsass')`;
+`var pathToBootstrapSassDir = 'bower_componets/bootstrap-sass'`
+`var config = [ 'glyphicons', 'grid', 'tables']`;
+
 `custombs([config(array)], [pathToBootstrapSassDir(string)])`;
 
-[pathToBootstrapSassDir] is __*optional for bower users*__. if undefined, custombootstrapsass will find the directory using your bower settings
+##### config:
+[config] argument is an array of bootstrap components to __*exclude*__ from your build
+
+[pathToBootstrapSassDir] path to your bootstrap-sass directory. if you installed bootstrap-sass with bower, and are running custom-bootstrap-sass next to .bowerrc or /bower_components/ then this argument is optional, custom-bootstrap-sass will find the folder for you
