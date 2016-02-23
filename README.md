@@ -10,18 +10,18 @@ or
 
 `$ bower install bootstrap-sass`
 
-#### install
+#### install:
 `$ npm install custom-bootstrap-sass --save`
 
-#### include
+#### include:
 `var custombs = require('custombootstrapsass')`;
 
-#### config
+#### config:
 the config argument is an array of bootstrap components to __*exclude*__ from your build
 
 `var config = [ 'glyphicons', 'grid', 'tables']`;
 
-#### implement with gulp, grunt, or your own node script
+#### implement with gulp, grunt, or your own node script:
 `custombs([config(array)], [pathToBootstrapSassDir(string)])`;
 
 [pathToBootstrapSassDir] is __*optional for bower users*__. if undefined, custombootstrapsass will find the directory using your bower settings
