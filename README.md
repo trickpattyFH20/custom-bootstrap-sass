@@ -19,8 +19,10 @@ or
 
 `var pathToBootstrapSassDir = 'bower_componets/bootstrap-sass';`
 
-```var config = [ 
+```var config = [
+
     'glyphicons', 'grid', 'tables'
+    
 ];```
 
 `custombs([config(array)], [pathToBootstrapSassDir(string)])`;
