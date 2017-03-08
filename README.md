@@ -21,7 +21,7 @@ or
 
 `var config = ['glyphicons', 'grid', 'tables'];`
 
-`custombs([config(array)], [pathToBootstrapSassDir(string)])`;
+`custombs(config: Array<string>, pathToBootstrapSassDir: string)`;
 
 ##### config:
 [config] - an array of bootstrap components to __*exclude*__ from your build
